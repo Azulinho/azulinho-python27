@@ -16,7 +16,7 @@ describe file('/usr/local/bin/easy_install-2.7') do
   it { should be_file }
 end
 
-describe file('/usr/local/bin/pip-2.7') do
+describe file('/usr/local/bin/pip2.7') do
   it { should be_file }
   it { should be_executable }
   it { should be_executable.by('owner') }
@@ -25,11 +25,9 @@ describe file('/usr/local/bin/pip-2.7') do
 end
 
 describe file('/usr/local/bin/python') do
-  it { should be_symlink }
   it { should be_linked_to '/usr/local/bin/python2.7' }
 end
 
 describe file('/usr/bin/python2.7') do
-  it { should be_symlink }
   it { should be_linked_to '/usr/local/bin/python2.7' }
 end
