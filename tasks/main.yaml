@@ -53,7 +53,7 @@
 - name: installs pip
   command: /usr/local/bin/easy_install-2.7 pip
     chdir=/tmp/
-    creates=/usr/local/bin/pip-2.7
+    creates=/usr/local/bin/pip2.7
   tags:
     - python27
 
